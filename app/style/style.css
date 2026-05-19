@@ -1,15 +1,27 @@
+* { 
+box-sizing: border-box;
+}
+
+
 header {
     height: 60px;
     width: 100x;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #def0ac;
+    background-color: #ff0000;
 }
 body {
+height: 100vh; /*Altura*/
+width: 100vw; /*Largura*/
+margin: 0; /*Margem*/
+}
+
+#container {
     width: 80vw;
     box-sizing: border-box;
     margin: 0 auto;
+    background-color: #f0f0f0; 
 }
 
 header {
@@ -21,11 +33,21 @@ header {
 }
 
 header img {
-    max-height: 80%;
+    max-height: 105%;
     margin: auto 0;
 }
 
 header a {
     font-family: cursive;
     font-weight: 500;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 15pt;
+    padding: 10px 20px;
+    background-color: #d40610;
+    border-radius: 15px;
+}
+
+header a:visited { 
+    background-color:rgb(126, 23, 23);
 }

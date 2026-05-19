@@ -1,5 +1,13 @@
+header {
+    height: 60px;
+    width: 100x;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #def0ac;
+}
 body {
-    width: 80vb;
+    width: 80vw;
     box-sizing: border-box;
     margin: 0 auto;
 }

@@ -10,6 +10,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: #ff0000;
+    margin: none;
 }
 body {
 height: 100vh; /*Altura*/
@@ -33,8 +34,10 @@ header {
 }
 
 header img {
-    max-height: 105%;
+    height: 100px;
     margin: auto 0;
+    width: 80px;
+    transform: scale(2);
 }
 
 .link-do-cabecalho {

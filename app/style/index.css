@@ -37,19 +37,19 @@ header img {
     margin: auto 0;
 }
 
-header a {
+.link-do-cabecalho {
     font-family: cursive;
     font-weight: 500;
     text-decoration: none;
     color: whitesmoke;
     font-size: 15pt;
     padding: 10px 20px;
-    background-color: #d40610;
+    background-color: #ff0000;
     border-radius: 15px;
 }
 
-header a:visited { 
-    background-color:rgb(126, 23, 23);
+.link-do-cabecalho:hover{ 
+    background-color: #bc0000;
 }
 
 #container section {
@@ -59,5 +59,23 @@ header a:visited {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-   
+    
+}
+b{ 
+    font-family: cursive;
+    font-size: 45pt;
+    line-height: 145px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px #000000;
+}
+
+
+b:hover {
+    box-shadow: 5px 5px 5px 5px #bd0000;
+    transition: box-shadow 1s;
+}
+
+p{
+ font-family: cursive;
+ font-size: 15pt;
 }

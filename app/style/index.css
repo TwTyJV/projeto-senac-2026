@@ -10,8 +10,8 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: #ff0000;
-    margin: none;
 }
+z
 body {
 height: 100vh; /*Altura*/
 width: 100vw; /*Largura*/
@@ -81,4 +81,10 @@ b:hover {
 p{
  font-family: cursive;
  font-size: 15pt;
+}
+@media (max-width: 650px ) {
+    #container header {
+        flex-direction: column;
+        display: flex ;
+    } 
 }

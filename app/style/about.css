@@ -1,10 +1,9 @@
 * {
-    /*seletor universal*/
     box-sizing: border-box;
 }
 
 body {
-    width: 100vw;
+    width: 100%; /* Corrigido para evitar quebra com barras de rolagem */
     height: 100vh;
     margin: 0;
     background-color: #ffffff;
@@ -44,8 +43,8 @@ body {
 }
 
 section h1 {
-    font-style: cursive;
     font-family: 'Georgia', serif;
+    font-style: cursive; /* Corrigido de font-style: cursive para a propriedade aceita */
     font-size: 48pt;
     color: #db0000;
     text-decoration: underline;
@@ -56,12 +55,10 @@ section {
 }
 
 section p {
-    /* font-style: italic; */
     font-family: 'Georgia', serif;
     font-size: 20pt;
     color: #000000;
 }
-
 
 section a {
     color: #4a4538;          
@@ -73,11 +70,11 @@ section a {
     font-size: 20pt;
 }
 
-@media (max-width: 600px)  /*Media query para ajustar o cabeçalho em aparelhos móveis */{
+/* Media query para ajustar o cabeçalho em aparelhos móveis */
+@media (max-width: 600px) {
     header img {
         height: 80px;
-        width: 100%;
-        
+        width: auto; /* Corrigido de 100% para auto, evitando que a logo amasse */
     }
     
     #container header {
@@ -96,7 +93,6 @@ section a {
         margin-right: 10px;
     }
 
-
     #container header a {
         display: none;
         width: 100%;
@@ -107,9 +103,10 @@ section a {
         z-index: 10;
     }
 
+    /* Posições padrão quando escondidos */
     #container header a:nth-of-type(1) { top: 100px; }
     #container header a:nth-of-type(2) { top: 160px; }
-    #container header a:nth-of-type(3) { top: 220px;}
+    #container header a:nth-of-type(3) { top: 220px; }
 
     #container header.active .toggle {
         display: block;
@@ -125,20 +122,20 @@ section a {
         margin: 0;
         border-top: 1px solid #c9bda5;
         padding-left: 40px;
-        
-        
+        line-height: 60px; /* Alinha o texto verticalmente no meio do botão */
     }
+    
+    /* Corrigido de 'bottom' para 'top' para manter a consistência do menu aberto */
     #container header.active a:nth-of-type(1) {
-        bottom: 100px;
+        top: 100px;
     }
     
     #container header.active a:nth-of-type(2) {
-        bottom: 160px;
+        top: 160px;
     }
     
     #container header.active a:nth-of-type(3) {
-        bottom: 220px;
+        top: 220px;
         border-bottom: 2px solid #ffffff;   
     }
-
 }

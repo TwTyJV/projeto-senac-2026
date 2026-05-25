@@ -1,24 +1,12 @@
+
 * {
     box-sizing: border-box;
 }
 
-
-header {
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #ff0000;
-}
-
 body {
     height: 100vh;
-    /*Altura*/
-    width: 100vw;
-    /*Largura*/
+    width: 100%; /* Corrigido de 100vw para evitar barra de rolagem horizontal */
     margin: 0;
-    /*Margem*/
 }
 
 #container {
@@ -26,7 +14,6 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     background-color: #ff0000;
-    /* abinha pra cobri o espaço*/
 }
 
 #container header {
@@ -52,12 +39,7 @@ body {
     font-size: 15pt;
     padding: 10px 20px;
     background-color: #db0000;
-    /* bordinha da bolota*/
     border-radius: 15px;
-}
-
-.link-do-cabecalho:hover {
-    background-color: #bc0000;
 }
 
 #container section {
@@ -67,32 +49,26 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 section h1 {
-    font-family: italic;
+    font-family: 'Georgia', serif; /* Corrigido: 'italic' não é família de fonte */
+    font-style: italic;            /* Adicionado o estilo itálico corretamente */
     font-size: 30pt;
     padding: 20px;
     color: #000000;
-
 }
 
 section p {
-    /* font-style: italic; */
     font-family: 'Georgia', serif;
     font-size: 20pt;
     color: #000000;
 }
 
-
 section a {
     color: aliceblue;
-    /* Muted, dark ink-brown */
     text-decoration: none;
-    /* Remove harsh default underline */
     border-bottom: 1px solid aliceblue;
-    /* Subtle, paper-colored underline */
     padding-bottom: 2px;
     transition: all 0.2s ease;
     font-family: 'Georgia', serif;
@@ -101,13 +77,12 @@ section a {
 
 section a:hover {
     color: aliceblue;
-    /* Darker shade of ink */
     border-bottom: 1px solid #000000;
-    /* Deepens the underline */
 }
 
 p {
-    font-family: italic;
+    font-family: 'Georgia', serif; /* Corrigido: alterado de italic para uma fonte real */
+    font-style: italic;            /* Aplicado o itálico do jeito certo */
     font-size: 15pt;
     color: #000000;
 }
@@ -115,6 +90,13 @@ p {
 @media (max-width: 650px) {
     #container header {
         flex-direction: column;
+        display: flex;
+        height: auto; /* Garante que o header cresça se os itens empilharem */
     }
 
+    #container header img {
+        max-width: 100px;
+        max-height: 100px;
+        transform: none; /* Remove o scale no mobile para não quebrar o layout */
+    }
 }

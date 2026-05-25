@@ -1,11 +1,11 @@
-
 * {
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
-    width: 100%; /* Corrigido de 100vw para evitar barra de rolagem horizontal */
+    width: 100%;
+    /* Corrigido de 100vw para evitar barra de rolagem horizontal */
     margin: 0;
 }
 
@@ -29,6 +29,7 @@ body {
     margin: auto 0;
     width: 80px;
     transform: scale(2);
+    
 }
 
 .link-do-cabecalho {
@@ -52,8 +53,10 @@ body {
 }
 
 section h1 {
-    font-family: 'Georgia', serif; /* Corrigido: 'italic' não é família de fonte */
-    font-style: italic;            /* Adicionado o estilo itálico corretamente */
+    font-family: 'Georgia', serif;
+    /* Corrigido: 'italic' não é família de fonte */
+    font-style: italic;
+    /* Adicionado o estilo itálico corretamente */
     font-size: 30pt;
     padding: 20px;
     color: #000000;
@@ -81,8 +84,10 @@ section a:hover {
 }
 
 p {
-    font-family: 'Georgia', serif; /* Corrigido: alterado de italic para uma fonte real */
-    font-style: italic;            /* Aplicado o itálico do jeito certo */
+    font-family: 'Georgia', serif;
+    /* Corrigido: alterado de italic para uma fonte real */
+    font-style: italic;
+    /* Aplicado o itálico do jeito certo */
     font-size: 15pt;
     color: #000000;
 }
@@ -91,12 +96,14 @@ p {
     #container header {
         flex-direction: column;
         display: flex;
-        height: auto; /* Garante que o header cresça se os itens empilharem */
+        height: auto;
+        /* Garante que o header cresça se os itens empilharem */
     }
 
     #container header img {
         max-width: 100px;
         max-height: 100px;
-        transform: none; /* Remove o scale no mobile para não quebrar o layout */
+        transform: none;
+        /* Remove o scale no mobile para não quebrar o layout */
     }
 }

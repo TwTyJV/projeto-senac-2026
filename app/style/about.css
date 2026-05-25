@@ -3,7 +3,8 @@
 }
 
 body {
-    width: 100%; /* Corrigido para evitar quebra com barras de rolagem */
+    width: 100%;
+    /* Corrigido para evitar quebra com barras de rolagem */
     height: 100vh;
     margin: 0;
     background-color: #ffffff;
@@ -44,7 +45,8 @@ body {
 
 section h1 {
     font-family: 'Georgia', serif;
-    font-style: cursive; /* Corrigido de font-style: cursive para a propriedade aceita */
+    font-style: cursive;
+    /* Corrigido de font-style: cursive para a propriedade aceita */
     font-size: 48pt;
     color: #db0000;
     text-decoration: underline;
@@ -61,9 +63,9 @@ section p {
 }
 
 section a {
-    color: #4a4538;          
-    text-decoration: none;   
-    border-bottom: 1px solid #c9bda5; 
+    color: #4a4538;
+    text-decoration: none;
+    border-bottom: 1px solid #c9bda5;
     padding-bottom: 2px;
     transition: all 0.2s ease;
     font-family: 'Georgia', serif;
@@ -74,15 +76,16 @@ section a {
 @media (max-width: 600px) {
     header img {
         height: 80px;
-        width: auto; /* Corrigido de 100% para auto, evitando que a logo amasse */
+        width: auto;
+        /* Corrigido de 100% para auto, evitando que a logo amasse */
     }
-    
+
     #container header {
         position: relative;
         justify-content: space-between;
         align-items: center;
     }
-    
+
     #container header .toggle {
         display: block;
         border-right: 2px solid #c9bda5;
@@ -104,9 +107,17 @@ section a {
     }
 
     /* Posições padrão quando escondidos */
-    #container header a:nth-of-type(1) { top: 100px; }
-    #container header a:nth-of-type(2) { top: 160px; }
-    #container header a:nth-of-type(3) { top: 220px; }
+    #container header a:nth-of-type(1) {
+        top: 100px;
+    }
+
+    #container header a:nth-of-type(2) {
+        top: 160px;
+    }
+
+    #container header a:nth-of-type(3) {
+        top: 220px;
+    }
 
     #container header.active .toggle {
         display: block;
@@ -122,20 +133,21 @@ section a {
         margin: 0;
         border-top: 1px solid #c9bda5;
         padding-left: 40px;
-        line-height: 60px; /* Alinha o texto verticalmente no meio do botão */
+        line-height: 60px;
+        /* Alinha o texto verticalmente no meio do botão */
     }
-    
+
     /* Corrigido de 'bottom' para 'top' para manter a consistência do menu aberto */
     #container header.active a:nth-of-type(1) {
         top: 100px;
     }
-    
+
     #container header.active a:nth-of-type(2) {
         top: 160px;
     }
-    
+
     #container header.active a:nth-of-type(3) {
         top: 220px;
-        border-bottom: 2px solid #ffffff;   
+        border-bottom: 2px solid #ffffff;
     }
 }

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./style/forms.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=book_ribbon" />
-    <script src="" defer></script>
+    <script src="./scripts/menu.js" defer></script>
+    <script src="./scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -22,27 +23,34 @@
         </header>
 
         <section>
-            <form action="submit">
+            <form id="post-form">
+
                 <h1>História <span class="material-symbols-outlined">
                         book_ribbon
                     </span></h1>
-                <label for="usuario">Nome</label>
-                <input type="text" id="usuario" name="nome">
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <label for="usuario">Nome </label> (ex: Felipe da Silva)
+                <input type="text" id="usuario" name="usuario" placeholder="Felipe da Silva">
 
-                <label for="título">Título</label>
-                <input type="text" id="Título" name="Título">
+                <label for="titulo">Email</label> (ex: felipedasilva@gmail.com)
+                <input type="email" name="email" id="email" placeholder="felipedasilva@gmail.com">
+
+                <label for="título">Título</label> (ex: Título da história)
+                <input type="text" id="titulo" name="titulo" placeholder="A vida é carnaval">
 
                 <label for="história">História</label>
-                <textarea name="história" id="história" cols="30" rows="10"> </textarea>
+                <textarea name="historia" id="historia" cols="30" rows="10" placeholder="Minha fruta favorita..."> </textarea>
 
-                
-
+                <button type="submit"> Enviar </button>
 
             </form>
         </section>
+
+        <footer>
+            <div id="historias"></div>
+        </footer>
+
+    </div>
 </body>
 
 </html>

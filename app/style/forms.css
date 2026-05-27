@@ -97,6 +97,9 @@ dialog {
     max-width: 600px;
     overflow-wrap: break-word;
 }
+dialog#modal::backdrop{
+    background-color: #333333;
+}
 
 label {
     color: #ffffff;

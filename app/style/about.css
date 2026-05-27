@@ -48,7 +48,7 @@ section h1 {
     font-style: cursive;
     /* Corrigido de font-style: cursive para a propriedade aceita */
     font-size: 48pt;
-    color: #db0000;
+    color: #ff0000;
     text-decoration: underline;
 }
 
@@ -59,7 +59,7 @@ section {
 section p {
     font-family: 'Georgia', serif;
     font-size: 20pt;
-    color: #000000;
+    color: #ffffff;
 }
 
 section a {

@@ -48,7 +48,7 @@ body {
 }
 
 #container section {
-    background-image: url('../images/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
+    background-image: url('../images/blablabla.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,101 +61,142 @@ section form {
     flex-direction: column;
     margin: 35px;
     align-items: center;
+    color: #ffffff;
 }
 
 textarea {
     height: 250px;
     width: 70%;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 input {
-height:30px;
-width: 70%;
-margin: 0 auto;
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
 
 }
 
 article.artigo {
-    background-color: rgb(255, 0, 0);
-
-}
-@media (max-width: 600px) {
-    /*Media query para ajustar o cabeçalho em aparelhos móveis */
-
-    header header img {
-        max-height: 80px;
-
-    }
-
-    #container header {
-        position: relative;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #container header .toggle {
-        display: block;
-        border-right: 2px solid black;
-        border-bottom: 2px solid black;
-        transform: rotateZ(45deg);
-        cursor: pointer;
-        margin-top: -10px;
-        margin-right: 10px;
-    }
-
-
-    #container header a {
-        display: none;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        border-bottom: 1px solid rgb(0, 0, 0);
-        position: absolute;
-        z-index: 10;
-    }
-
-    #container header a:nth-of-type(1) {
-        top: 100px;
-    }
-
-    #container header a:nth-of-type(2) {
-        top: 160px;
-    }
-
-    #container header a:nth-of-type(3) {
-        top: 220px;
-    }
-
-    #container header.active .toggle {
-        transform: rotate(225deg);
-        margin-top: 5px;
-    }
-
-    #container header.active a {
-        display: block;
-        background-color: rgb(248, 1, 1);
-        height: 60px;
-        width: 100%;
-        margin: 0;
-        border-top: 1px solid rgb(245, 245, 245);
-        color: black;
-    }
-
-    #container header.active a:nth-of-type(1) {
-        bottom: 100px;
-    }
-
-    #container header.active a:nth-of-type(2) {
-        bottom: 160px;
-    }
-
-    #container header.active a:nth-of-type(3) {
-        bottom: 220px;
-        border-bottom: 2px solid #ffffff;
-    }
+    background-color: rgb(255, 2, 2);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
 
 }
 
+dialog {
+
+    background-color: rgb(187, 187, 187);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    background-image: url('../images/poa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 600px;
+    overflow-wrap: break-word;
+}
+
+label {
+    color: #ffffff;
+}
+
+section h1 {
+    font-family: 'Georgia', serif;
+    font-style: cursive;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+section p {
+    font-family: 'Georgia', serif;
+    font-size: 20pt;
+    color: #ffffff;
+}
+
+section a {
+    color: #4a4538;
+    text-decoration: none;
+    border-bottom: 1px solid #c9bda5;
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+    font-family: 'Georgia', serif;
+    font-size: 20pt;
+}
+    @media (max-width: 600px) {
+        /*Media query para ajustar o cabeçalho em aparelhos móveis */
+
+        header header img {
+            max-height: 80px;
+
+        }
+
+        #container header {
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #container header .toggle {
+            display: block;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+            transform: rotateZ(45deg);
+            cursor: pointer;
+            margin-top: -10px;
+            margin-right: 10px;
+        }
 
 
+        #container header a {
+            display: none;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            position: absolute;
+            z-index: 10;
+        }
+
+        #container header a:nth-of-type(1) {
+            top: 100px;
+        }
+
+        #container header a:nth-of-type(2) {
+            top: 160px;
+        }
+
+        #container header a:nth-of-type(3) {
+            top: 220px;
+        }
+
+        #container header.active .toggle {
+            transform: rotate(225deg);
+            margin-top: 5px;
+        }
+
+        #container header.active a {
+            display: block;
+            background-color: rgb(248, 1, 1);
+            height: 60px;
+            width: 100%;
+            margin: 0;
+            border-top: 1px solid rgb(245, 245, 245);
+            color: black;
+        }
+
+        #container header.active a:nth-of-type(1) {
+            bottom: 100px;
+        }
+
+        #container header.active a:nth-of-type(2) {
+            bottom: 160px;
+        }
+
+        #container header.active a:nth-of-type(3) {
+            bottom: 220px;
+            border-bottom: 2px solid #ffffff;
+        }
+
+    }

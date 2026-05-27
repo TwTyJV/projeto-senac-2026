@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=book_ribbon" />
     <script src="./scripts/menu.js" defer></script>
-    <script src="./scripts/form.js" defer></script>
+    <script type="module" src="./scripts/form.js"></script>
 </head>
 
 <body>
@@ -36,15 +36,21 @@
                 <input type="email" name="email" id="email" placeholder="felipedasilva@gmail.com">
 
                 <label for="título">Título</label> (ex: Título da história)
-                <input type="text" id="titulo" name="titulo" placeholder="A vida é carnaval">
+                <input type="text" id="titulo" name="titulo" placeholder="Semente">
 
                 <label for="história">História</label>
-                <textarea name="historia" id="historia" cols="30" rows="10" placeholder="Minha fruta favorita..."> </textarea>
+                <textarea name="historia" id="historia" cols="30" rows="10"
+                    placeholder="Minha fruta favorita..."> </textarea>
 
                 <button type="submit"> Enviar </button>
 
             </form>
         </section>
+
+        <dialog id="modal">
+            <button autofocus>Fechar</button>
+            <div id="modal-content"></div>
+        </dialog>
 
         <footer>
             <div id="historias"></div>

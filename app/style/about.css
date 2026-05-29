@@ -1,84 +1,115 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    min-height: 100vh;
     width: 100%;
-    /* Corrigido para evitar quebra com barras de rolagem */
-    height: 100vh;
     margin: 0;
-    background-color: #ffffff;
 }
 
 #container {
     width: 100%;
-    height: 100%;
     margin: 0 auto;
+    background-color: #ff0000;
 }
 
 #container header {
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100px;
-    width: 100%;
 }
 
 #container header img {
-    max-width: 200px;
+    height: 115px;
+    margin: auto 0;
+    width: 80px;
+    transform: scale(2); /* Lembre-se: se a imagem cortar nas bordas, diminua o scale ou aumente a altura do header */
 }
-
-#container header .toggle {
-    display: none;
-    height: 20px;
-    width: 20px;
-}
-
 
 .link-do-cabecalho {
-    margin-right: 15px;
-    color: #dc0000;
+    font-family: cursive;
+    font-weight: 500;
     text-decoration: none;
-    font-variant: small-caps;
-    font-weight: bold;
-    font-size: 20pt;
+    color: whitesmoke;
+    font-size: 1.25rem; /* Atualizado de pt para rem */
+    padding: 10px 20px;
+    background-color: #db0000;
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.link-do-cabecalho:hover {
+    background-color: #b30000;
+}
+
+#container section {
+    width: 100%;
+    min-height: 80vh; /* Mudado para min-height para evitar quebras se o texto for longo */
+    background-image: url(../images/download.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
 }
 
 section h1 {
     font-family: 'Georgia', serif;
-    font-style: cursive;
-    /* Corrigido de font-style: cursive para a propriedade aceita */
-    font-size: 48pt;
-    color: #ff0000;
-    text-decoration: underline;
-}
-
-section {
-    margin: 10% 0 0 10%;
+    font-style: italic;
+    font-size: 2.5rem;
+    padding: 20px;
+    color: #ffffff;
 }
 
 section p {
     font-family: 'Georgia', serif;
-    font-size: 20pt;
+    font-size: 1.5rem;
     color: #ffffff;
+    margin-bottom: 15px;
 }
 
 section a {
-    color: #4a4538;
+    color: aliceblue;
     text-decoration: none;
-    border-bottom: 1px solid #c9bda5;
+    border-bottom: 1px solid aliceblue;
     padding-bottom: 2px;
     transition: all 0.2s ease;
     font-family: 'Georgia', serif;
-    font-size: 20pt;
+    font-size: 1.5rem;
 }
 
-/* Media query para ajustar o cabeçalho em aparelhos móveis */
+section a:hover {
+    color: aliceblue;
+    border-bottom: 1px solid #000000;
+}
+
+.footer-basico {
+    background-color: #222222;
+    padding: 30px 10px;        
+    text-align: center;        
+    width: 100%;     
+    display: flex;
+    justify-content: space-evenly;          
+}
+
+.footer-basico p {
+    font-family: 'Georgia', serif;
+    font-style: normal;        
+    font-size: 0.9rem;         
+    color: #ffffff;            
+    margin: 0;                 
+}
+
 @media (max-width: 600px) {
-    header img {
-        height: 80px;
-        width: 0 auto;
-        /* Corrigido de 100% para auto, evitando que a logo amasse */
+    /*Media query para ajustar o cabeçalho em aparelhos móveis */
+
+    header header img {
+        max-height: 80px;
+
     }
 
     #container header {
@@ -89,25 +120,27 @@ section a {
 
     #container header .toggle {
         display: block;
-        border-right: 2px solid #c9bda5;
-        border-bottom: 2px solid #c9bda5;
-        transform: rotateZ(45deg);
+        width: 15px;
+        height: 15px;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        transform: rotate(45deg);
         cursor: pointer;
-        margin-top: -10px;
         margin-right: 10px;
+        transition: transform 0.3s ease;
     }
+
 
     #container header a {
         display: none;
         width: 100%;
         text-align: center;
         margin: 0;
-        border-bottom: 1px solid #c9bda5;
+        border-bottom: 1px solid rgb(0, 0, 0);
         position: absolute;
         z-index: 10;
     }
 
-    /* Posições padrão quando escondidos */
     #container header a:nth-of-type(1) {
         top: 100px;
     }
@@ -121,34 +154,31 @@ section a {
     }
 
     #container header.active .toggle {
-        display: block;
         transform: rotate(225deg);
         margin-top: 5px;
     }
 
     #container header.active a {
         display: block;
-        background-color: #f4ecd8;
+        background-color: rgb(248, 1, 1);
         height: 60px;
         width: 100%;
         margin: 0;
-        border-top: 1px solid #c9bda5;
-        padding-left: 40px;
-        line-height: 60px;
-        /* Alinha o texto verticalmente no meio do botão */
+        border-top: 1px solid rgb(245, 245, 245);
+        color: black;
     }
 
-    /* Corrigido de 'bottom' para 'top' para manter a consistência do menu aberto */
     #container header.active a:nth-of-type(1) {
-        top: 100px;
+        bottom: 100px;
     }
 
     #container header.active a:nth-of-type(2) {
-        top: 160px;
+        bottom: 160px;
     }
 
     #container header.active a:nth-of-type(3) {
-        top: 220px;
+        bottom: 220px;
         border-bottom: 2px solid #ffffff;
     }
-}
+
+    }

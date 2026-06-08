@@ -325,3 +325,4 @@ if __name__ == '__main__':
     lista_extremos_trocados = trocar_extremos(numeros_para_trocar)
     print(lista_extremos_trocados)
     
+

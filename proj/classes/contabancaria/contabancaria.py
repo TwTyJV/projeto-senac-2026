@@ -1,20 +1,17 @@
 class ContaBancaria:
-
-    titular:str  
-    saldo:float
+    titular: str
+    saldo: float = 0.0
 
     def __init__(self, titular:str):
         self.titular = titular
-        self.saldo = 0.0
-
-
-    def depositar(self, valor: float) -> None:
+    
+    def depositar(self, valor: float):
         if valor > 0:
-            self.saldo += valor
-
+            self.saldo = self.saldo + valor
+    
     def sacar(self, valor: float) -> bool:
-        if valor > 0 and self.saldo >= valor:
-            self.saldo -= valor
-            return True
-        else:
+        if self.saldo - valor < 0:
             return False
+        
+        self.saldo = self.saldo - valor
+        return True

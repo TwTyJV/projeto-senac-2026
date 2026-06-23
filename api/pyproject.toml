@@ -3,7 +3,7 @@ name = "viajei_api"
 version = "0.1.0"
 description = "Está é a api (aplication interface) do projeto viajei"
 authors = [
-    {name = "João vitor",email = "joaocurso840@gmail.com"}
+    {name = "Joao vitor",email = "joaocurso840@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13,<4.0"
@@ -34,14 +34,23 @@ extend-exclude = ['migrations']
 preview = true
 select = ['I', 'F', 'W', 'PL', 'PT']
 
-
 [tool.ruff.format]
 preview = true
 quote-slyle = 'double'
 
 [tool.pytest]
 pythonpath = ['.']
-addopts = [´-p', 'no:warnings', '--cov=viajei_api', '--cov-context=test']
+addopts = ['-p', 'no:warnings', '--cov=viajei_api', '--cov-context=test']
+
 
 [tool.typos.files]
 extend-exclude = ['*.md']
+
+[tool.taskipy.tasks]
+lint = 'ruff check'
+pre_format = 'ruff check --fix'
+format = 'ruff format'
+run = 'fastapi dev viajei_api/app.py'
+pre_test = 'task lint'
+test = 'pytest -s -x -vv'
+post_test = 'coverage html --show-contexts'

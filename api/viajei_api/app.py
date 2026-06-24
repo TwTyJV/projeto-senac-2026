@@ -1,9 +1,23 @@
+from http import HTTPStatus
+
 from fastapi import FastAPI
 
-from viajei_api.schemas import Message
+from viajei_api.schemas.user import User, UserDB, UserPublic
 
 app = FastAPI()
 
-@app.get('/', response_model=Message)
-def ola_mundo():
-    return{'Olá! Turma!','Buenos dias --gruop'}
+database = []
+
+
+@app.get("/")
+def read__root():
+    return {"message": "Bem vindo!"}
+
+
+@app.post("/auth/", status_code=HTTPStatus.CREATED, response_model=UserPublic)
+def login(user: User):
+    user_with_id = UserDB(**user.model_dump(), id=len(database) + 1)
+
+    database.append(user_with_id)
+
+    return user_with_id

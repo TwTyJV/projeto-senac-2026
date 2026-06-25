@@ -4,7 +4,7 @@ from http import HTTPStatus
 def test_create_user(client):
 
     response = client.post(
-        "/auth/",
+        "/users/",
         json={
             "email": "alice@example.com",
             "password": "secret",

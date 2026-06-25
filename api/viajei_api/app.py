@@ -15,7 +15,7 @@ def read__root():
     return {"message": "Bem vindo!"}
 
 
-@app.post("/auth/", status_code=HTTPStatus.CREATED, response_model=UserPublic)
+@app.post("/users/", status_code=HTTPStatus.CREATED, response_model=UserPublic)
 def login(user: User):
     user_with_id = UserDB(**user.model_dump(), id=len(database) + 1)
 

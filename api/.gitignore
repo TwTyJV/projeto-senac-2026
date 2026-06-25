@@ -4,4 +4,4 @@ _pycache_
 .venv
 htmlcov
 poetry.lock
-.coveage
+.coverage
